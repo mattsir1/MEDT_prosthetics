@@ -1,0 +1,14 @@
+
+*.db
+*.db-shm
+*.db-wal
+*.opendb
+*.ipch
+*.obj
+*.recipe
+*.ilk
+*.log
+*.pdb
+*.tlog
+MEDT_Joint/Debug/MEDT_Joint.vcxproj.FileListAbsolute.txt
+*.idb

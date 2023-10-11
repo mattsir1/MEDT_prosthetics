@@ -1,0 +1,39 @@
+joint
+
+	//functional range
+	degreeMin
+	degreeMax
+	degreeRange = degreeMax - degreeMin
+	degreeDefault = degreeMin + (degreeRange / 2)
+	
+	currentDegrees
+	 targetDegrees
+	
+	
+     //this is the activation profile for the joint
+	 inputTarget = 5
+	 inputRange = 0.5
+		convert this to an array so each input for each joint has respective threshold
+
+
+	 //used for normalizing input
+	 inputMin
+	 inputMax
+	 
+	 inputs[] //sensor direct output
+	outputs[] //desired rotation degrees
+	
+	for each input 
+		add to inputSum
+		inputCount += 1
+		
+		if inputMin > input
+			inputMin = input
+		if inputMax < input
+			inputMax = input
+		
+	inputSum /= inputCount //produce a result equally divided by inputs for a more normal result?
+	
+	if abs(inputTarget - inputSum) < inputRange
+		return targetDegrees
+	return currentDegrees
